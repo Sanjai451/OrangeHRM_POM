@@ -1,4 +1,4 @@
-package Demo;
+package demo_DDT_prac;
 
 import java.time.Duration;
 

@@ -1,4 +1,4 @@
-package Demo;
+package demo_DDT_prac;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package Demo;
+package demo_DDT_prac;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -16,15 +16,32 @@ public class LoginPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	// this will works for both orange HRM and Swaglabs demo
+//	@FindAll({@FindBy(id = "user-name"), @FindBy(name = "username")})
+//	WebElement usernameInput;
+//	
+//	@FindAll({@FindBy(id = "password"), @FindBy(name = "password")})
+//	WebElement passwordInput;
+//	
+//	@FindAll({@FindBy(id = "login-button"), @FindBy(xpath = "//button[@type='submit']")})
+//	WebElement loginButton;
 	
-	@FindAll({@FindBy(id = "user-name"), @FindBy(name = "username")})
+	@FindBy(name = "username")
 	WebElement usernameInput;
 	
-	@FindAll({@FindBy(id = "password"), @FindBy(name = "password")})
+	@FindBy(name = "password")
 	WebElement passwordInput;
 	
-	@FindAll({@FindBy(id = "login-button"), @FindBy(xpath = "//button[@type='submit']")})
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement loginButton;
+	
+	public void login(String username, String password) {
+		usernameInput.sendKeys(username);
+		
+		passwordInput.sendKeys(password);
+		
+		loginButton.click();
+	}
 	
 	public void login() {
 		String username, passsword, url;

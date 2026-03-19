@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Demo.Test1">
+      <class name="demo_DDT_prac.GetDataFromCSV">
         <methods>
-          <include name="login"/>
+          <include name="loginOrange"/>
         </methods>
-      </class> <!-- Demo.Test1 -->
+      </class> <!-- demo_DDT_prac.GetDataFromCSV -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

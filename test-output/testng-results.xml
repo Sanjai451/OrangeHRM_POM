@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-17T15:20:23 IST" name="Default suite" finished-at="2026-03-17T15:20:27 IST" duration-ms="3937">
+  <suite started-at="2026-03-18T13:10:57 IST" name="Default suite" finished-at="2026-03-18T13:11:35 IST" duration-ms="37796">
     <groups>
     </groups>
-    <test started-at="2026-03-17T15:20:23 IST" name="Default test" finished-at="2026-03-17T15:20:27 IST" duration-ms="3937">
-      <class name="Demo.Test1">
-        <test-method signature="login()[pri:0, instance:Demo.Test1@2b662a77]" started-at="2026-03-17T15:20:23 IST" name="login" finished-at="2026-03-17T15:20:27 IST" duration-ms="3901" status="PASS">
+    <test started-at="2026-03-18T13:10:57 IST" name="Default test" finished-at="2026-03-18T13:11:35 IST" duration-ms="37796">
+      <class name="demo_DDT_prac.LoginPageUsingProperties_ObjectRepo">
+        <test-method signature="login()[pri:0, instance:demo_DDT_prac.LoginPageUsingProperties_ObjectRepo@6cf0e0ba]" started-at="2026-03-18T13:10:57 IST" name="login" finished-at="2026-03-18T13:11:35 IST" duration-ms="37714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-      </class> <!-- Demo.Test1 -->
+      </class> <!-- demo_DDT_prac.LoginPageUsingProperties_ObjectRepo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
