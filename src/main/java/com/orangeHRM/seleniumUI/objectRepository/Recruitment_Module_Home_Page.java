@@ -12,6 +12,9 @@ public class Recruitment_Module_Home_Page {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(xpath = "//a[.='Candidates']")
+	private WebElement candidatePageButton;
 
 	@FindBy(xpath = "//a[text()='Vacancies']")
 	private WebElement vacancyPageButton;
@@ -21,6 +24,10 @@ public class Recruitment_Module_Home_Page {
 	
 	public void clickVacancyButton() {
 		vacancyPageButton.click();
+	}
+	
+	public void clickCandidateButton() {
+		candidatePageButton.click();
 	}
 	
 	public void clickAddCandidateButton() {

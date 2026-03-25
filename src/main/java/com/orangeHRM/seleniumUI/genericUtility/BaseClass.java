@@ -1,11 +1,6 @@
 package com.orangeHRM.seleniumUI.genericUtility;
 
-import java.net.URL;
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -20,63 +15,71 @@ import com.orangeHRM.seleniumUI.objectRepository.DashboardPage;
 import com.orangeHRM.seleniumUI.objectRepository.LoginPage;
 
 public class BaseClass {
+	String PATH = "./src/test/resources/OrangeHRMCommonData/common_data.properties";	
     public WebDriver driver = null;
+    public WebDriverUtility webDriverUtility = null;
     public LoginPage loginPage = null;
     public DashboardPage dashboardPage = null;
-    public Actions actions = null;
     public PropertiesUtility propertiesUtility = null;
+    public FileUtility fileUtility = new FileUtility(PATH);
 	
 	@BeforeSuite
-	public void beforeSuite() {
+	public void configBeforeSuite() {
 		Reporter.log("--- Executing Suite ---", true);
 	}
 	@BeforeTest
-	public void beforeTest() {
+	public void configBeforeTest() {
 		Reporter.log("--- Executing Test ---", true);
-		propertiesUtility = new PropertiesUtility();
+//		propertiesUtility = new PropertiesUtility();
 	}
 	
 	@BeforeClass
-	public void beforeClass() {
+	public void configBeforeClass() {
 		Reporter.log("--- Executing Class ---", true);
+				
+//		this.driver = GetBrowser.getBrowser(PropertiesUtility.readData("browser"));
+		this.driver = GetBrowser.getBrowser(fileUtility.getPropertyValue("browser"));
 		
-		this.driver = GetBrowser.getBrowser(PropertiesUtility.readData("browser"));
+		this.webDriverUtility = new WebDriverUtility(driver);
+		webDriverUtility.setMaximizeBrowser();
+		webDriverUtility.implicitlyWait(15);
 		
-		this.driver.manage().window().maximize();
-		this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));	
-		this.actions = new Actions(driver);
 		this.loginPage = new LoginPage(driver);
 		this.dashboardPage = new DashboardPage(driver);
 		
-		driver.get(PropertiesUtility.readData("url"));
+//		driver.get(PropertiesUtility.readData("url"));
+		driver.get(fileUtility.getPropertyValue("url"));
 		
 	}
 	
 	@BeforeMethod
-	public void beforeMethod() {
+	public void configBeforeMethod() {
 		Reporter.log("--- Executing Method ---", true);
 		
-		loginPage.performLogin(PropertiesUtility.readData("username"), PropertiesUtility.readData("password"));
+//		loginPage.performLogin(PropertiesUtility.readData("username"), PropertiesUtility.readData("password"));
+		loginPage.performLogin(fileUtility.getPropertyValue("username"), 
+				fileUtility.getPropertyValue("password"));
 		
-		Reporter.log("--- Logged in Successfully ---", true);
+		Reporter.log("[INFO]    Logged in Successfully", true);
 	}
 	@AfterMethod
-	public void afterMethod() {
+	public void configAfterMethod() {
 		Reporter.log("--- Executing after method ---", true);
 		dashboardPage.performLogout();
-		Reporter.log("--- Logged Out Successfully  ---", true);
+		Reporter.log("[INFO]    Logged Out Successfully", true);
 	}
 	@AfterClass
-	public void afterClass() {
+	public void configAfterClass() {
 		Reporter.log("--- Executing after Class ---", true);
-		driver.quit();
+		this.webDriverUtility.quitBrowser();
+		Reporter.log("[INFO]    QUITTED BROWSER");
 	}
 	@AfterTest
-	public void afterTest() {
+	public void configAfterTest() {
 		Reporter.log("--- Executing after test ---", true);
 	}
 	@AfterSuite
-	public void afterSuite() {
+	public void configAfterSuite() {
 		Reporter.log("--- Executing after suite ---", true);
 	}
 }

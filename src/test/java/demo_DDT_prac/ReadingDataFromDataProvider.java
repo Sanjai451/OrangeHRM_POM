@@ -3,6 +3,8 @@ package demo_DDT_prac;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.orangeHRM.seleniumUI.genericUtility.ExcelUtility;
+
 public class ReadingDataFromDataProvider {
 	
 	@DataProvider(name = "KeyValueData")
@@ -69,6 +71,10 @@ public class ReadingDataFromDataProvider {
 		System.out.println(key + " : " + value);
 	}
 	
+	@Test(dataProvider = "excelUtilityProvider", dataProviderClass = ExcelUtility.class)
+	public void testexcel(String a, String b) {
+		System.out.println(a + " _ " + b);
+	}
 	
 
 }

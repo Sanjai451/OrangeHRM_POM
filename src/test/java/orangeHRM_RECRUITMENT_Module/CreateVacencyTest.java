@@ -1,13 +1,13 @@
 package orangeHRM_RECRUITMENT_Module;
 
-import java.time.Duration;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
+import java.util.Iterator;
+
 import org.testng.annotations.Test;
 
 import com.orangeHRM.seleniumUI.genericUtility.ActionUtility;
 import com.orangeHRM.seleniumUI.genericUtility.BaseClass;
+import com.orangeHRM.seleniumUI.genericUtility.ExcelUtility;
 import com.orangeHRM.seleniumUI.objectRepository.Recruitment_Module_AddVacancy_Page;
 import com.orangeHRM.seleniumUI.objectRepository.Recruitment_Module_Home_Page;
 import com.orangeHRM.seleniumUI.objectRepository.Recruitment_Module_Vacancy_Page;
@@ -39,21 +39,40 @@ public class CreateVacencyTest extends BaseClass{
 //			.sendKeys(Keys.ARROW_DOWN, Keys.ENTER)
 //			.perform();
 		
-		ActionUtility au = new ActionUtility(actions);
+		ActionUtility au = new ActionUtility(driver);
 		
-		au.manageClickAndWait(addVacancy_Page.getJobTitleInput(), 3);
-		au.performKeyDown(3);
-		au.performEnter().perform();
+//		au.manageClickAndWait(addVacancy_Page.getJobTitleInput(), 3);
+//		au.performKeyDown(3);
+//		au.performEnter().perform();
+		
+		au.navigateSelectAutoSuggestionDropDown(addVacancy_Page.getJobTitleInput(), 3);
 		
 		
-		au.manageSearchAndWait(addVacancy_Page.getHiringManagerInput(), "a", 5);
-		au.performKeyDown(1);
-		au.performEnter().perform();
+//		au.manageSearchAndWait(addVacancy_Page.getHiringManagerInput(), "a", 5);
+//		au.performKeyDown(1);
+//		au.performEnter().perform();
+		
+		
+//		au.navigateTypeAutoSuggestionDropDown(
+//				addVacancy_Page.getHiringManagerInput(), "a", 1, 5);
 			
+		ExcelUtility excelUtility = new ExcelUtility("./src/test/resources/orange_hrm_recruitment_vacancy_testdata/vacancy.xlsx",
+				"HiringManager");
+		
+		int numberOfManagerTestData = excelUtility.getNumberOfRows();
+		
+		for(int i=1; i<2; i++) {
+			String searchText = excelUtility.getData(i, 1);
+			System.out.println("Search Text : " + searchText);
+			
+			au.navigateTypeAutoSuggestionDropDown(
+					addVacancy_Page.getHiringManagerInput(), searchText, 1, 5);
+		}
 		
 		// Save button
 		addVacancy_Page.clickSaveButton();
 		
 		try {Thread.sleep(5000);} catch (Exception e) {}
 	}
+	
 }

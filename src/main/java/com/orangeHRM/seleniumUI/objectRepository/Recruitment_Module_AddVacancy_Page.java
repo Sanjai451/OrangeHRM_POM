@@ -49,6 +49,7 @@ public class Recruitment_Module_AddVacancy_Page {
 
 //	==================================================================================
 
+	@Deprecated
 	public void enterJobTitle() {
 		actions
 			.click(jobTitleInput)
@@ -57,9 +58,10 @@ public class Recruitment_Module_AddVacancy_Page {
 			.perform();
 	}
 
-	public void enterHiringManager() {
+	@Deprecated
+	public void enterHiringManager(String s) {
 		actions
-			.sendKeys(hiringManagerInput, "a")
+			.sendKeys(hiringManagerInput, s)
 			.pause(Duration.ofSeconds(5))
 			.sendKeys(Keys.ARROW_DOWN, Keys.ENTER)
 			.perform();
@@ -97,8 +99,9 @@ public class Recruitment_Module_AddVacancy_Page {
 		sendVacancyName(vacancy);
 		sendDescription(description);
 		sendNumberOfPositions(numberOfPosition);
-//		enterHiringManager();
-//		enterJobTitle();
+		
+//		String numberString = numberOfPosition.split("\\.")[0];
+//		sendNumberOfPositions(numberString);
 	}
 
 }
