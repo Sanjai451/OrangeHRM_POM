@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest">
+      <class name="demo_DDT_prac.CaptureScreenShots">
         <methods>
-          <include name="configAfterSuite"/>
-          <include name="configBeforeSuite"/>
-          <include name="configAfterClass"/>
-          <include name="test"/>
-          <include name="configBeforeClass"/>
-          <include name="configAfterMethod"/>
-          <include name="configBeforeTest"/>
-          <include name="configBeforeMethod"/>
-          <include name="configAfterTest"/>
+          <include name="screenShot"/>
         </methods>
-      </class> <!-- orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest -->
+      </class> <!-- demo_DDT_prac.CaptureScreenShots -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

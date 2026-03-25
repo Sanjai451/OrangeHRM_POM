@@ -66,6 +66,10 @@ public class DashboardPage {
 	public void clickRecruitment() {
 		recruitmentSideBar.click();
 	}
+	
+	public WebElement getRecruitmentElement() {
+		return recruitmentSideBar;
+	}
 
 	public void performLogout() {
 		profileIconDropDown.click();

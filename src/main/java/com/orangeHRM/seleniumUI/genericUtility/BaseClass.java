@@ -10,10 +10,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
 import com.orangeHRM.seleniumUI.objectRepository.DashboardPage;
 import com.orangeHRM.seleniumUI.objectRepository.LoginPage;
 
+@Listeners(com.orangeHRM.seleniumUI.genericUtility.ListenerImplementation.class)
 public class BaseClass {
 	String PATH = "./src/test/resources/OrangeHRMCommonData/common_data.properties";	
     public WebDriver driver = null;

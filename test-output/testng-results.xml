@@ -1,115 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[--- Executing Suite ---]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing Test ---]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing Class ---]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing Method ---]]>
-    </line>
-    <line>
-      <![CDATA[[INFO]    Logged in Successfully]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing after method ---]]>
-    </line>
-    <line>
-      <![CDATA[[INFO]    Logged Out Successfully]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing after Class ---]]>
-    </line>
-    <line>
-      <![CDATA[[INFO]    QUITTED BROWSER]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing after test ---]]>
-    </line>
-    <line>
-      <![CDATA[--- Executing after suite ---]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-03-25T09:09:40 IST" name="Default suite" finished-at="2026-03-25T09:10:23 IST" duration-ms="43148">
+  <suite started-at="2026-03-25T13:44:12 IST" name="Default suite" finished-at="2026-03-25T13:44:16 IST" duration-ms="4298">
     <groups>
     </groups>
-    <test started-at="2026-03-25T09:09:40 IST" name="Default test" finished-at="2026-03-25T09:10:23 IST" duration-ms="43148">
-      <class name="orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest">
-        <test-method is-config="true" signature="configBeforeSuite()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:09:40 IST" name="configBeforeSuite" finished-at="2026-03-25T09:09:40 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing Suite ---]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBeforeSuite -->
-        <test-method is-config="true" signature="configBeforeTest()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:09:40 IST" name="configBeforeTest" finished-at="2026-03-25T09:09:40 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing Test ---]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBeforeTest -->
-        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:09:40 IST" name="configBeforeClass" finished-at="2026-03-25T09:10:01 IST" duration-ms="20290" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing Class ---]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBeforeClass -->
-        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:01 IST" name="configBeforeMethod" finished-at="2026-03-25T09:10:06 IST" duration-ms="5588" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing Method ---]]>
-            </line>
-            <line>
-              <![CDATA[[INFO]    Logged in Successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configBeforeMethod -->
-        <test-method signature="test()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:06 IST" name="test" finished-at="2026-03-25T09:10:21 IST" duration-ms="14836" status="PASS">
+    <test started-at="2026-03-25T13:44:12 IST" name="Default test" finished-at="2026-03-25T13:44:16 IST" duration-ms="4298">
+      <class name="demo_DDT_prac.CaptureScreenShots">
+        <test-method signature="screenShot()[pri:0, instance:demo_DDT_prac.CaptureScreenShots@18078bef]" started-at="2026-03-25T13:44:12 IST" name="screenShot" finished-at="2026-03-25T13:44:16 IST" duration-ms="4229" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:21 IST" name="configAfterMethod" finished-at="2026-03-25T09:10:23 IST" duration-ms="2030" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing after method ---]]>
-            </line>
-            <line>
-              <![CDATA[[INFO]    Logged Out Successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAfterMethod -->
-        <test-method is-config="true" signature="configAfterClass()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:23 IST" name="configAfterClass" finished-at="2026-03-25T09:10:23 IST" duration-ms="355" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing after Class ---]]>
-            </line>
-            <line>
-              <![CDATA[[INFO]    QUITTED BROWSER]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAfterClass -->
-        <test-method is-config="true" signature="configAfterTest()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:23 IST" name="configAfterTest" finished-at="2026-03-25T09:10:23 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing after test ---]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAfterTest -->
-        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest@327514f]" started-at="2026-03-25T09:10:23 IST" name="configAfterSuite" finished-at="2026-03-25T09:10:23 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[--- Executing after suite ---]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- configAfterSuite -->
-      </class> <!-- orangeHRM_RECRUITMENT_Module.CreateRecruitmentTest -->
+        </test-method> <!-- screenShot -->
+      </class> <!-- demo_DDT_prac.CaptureScreenShots -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
