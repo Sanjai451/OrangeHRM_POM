@@ -1,5 +1,7 @@
 package orangeHRM_PIM_Module;
 
+import static org.testng.Assert.assertTrue;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -27,29 +29,26 @@ public class AddEmployeeTest extends BaseClass{
 		
 		pim_Module_Home_Page.clickAddButton();
 		
-		String firstName = "first_name";
-		
-		pim_Module_AddEmp_Page.addEmployee(
-				firstName, 
-				"mname", 
-				"lastname", 
-				"e90", 
-				"usersfade44", 
-				"password1234"
-			);
-		
-		try {
-			Thread.sleep(5000);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		
-		if(driver.findElement(By.xpath("//h6[contains(.,'" + firstName + "')]")).isDisplayed()) {
-			System.out.println("Saved successfully");
-		}else {
-			System.out.println("Failed while saving data");
-		}
-		
+//		String firstName = "first_name";
+//		
+//		pim_Module_AddEmp_Page.addEmployee(
+//				firstName, 
+//				"mname", 
+//				"lastname", 
+//				"e90", 
+//				"usersfade44", 
+//				"password1234"
+//			);
+//		
+//		try {Thread.sleep(5000);} catch (Exception e) {}
+//		
+//		if(driver.findElement(By.xpath("//h6[contains(.,'" + firstName + "')]")).isDisplayed()) {
+//			System.out.println("Saved successfully");
+//		}else {
+//			System.out.println("Failed while saving data");
+//		}
+//		
+		assertTrue(false);
 	}
 	
 //	

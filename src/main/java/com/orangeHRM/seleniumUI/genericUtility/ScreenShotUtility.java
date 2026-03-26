@@ -1,6 +1,7 @@
 package com.orangeHRM.seleniumUI.genericUtility;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -21,7 +22,7 @@ public class ScreenShotUtility {
 	/*
 	 * dest = "./reports/filename"
 	 */
-	public void takeScreenShot(String dest, String filename, FileExtension extension) {
+	public String takeScreenShot(String dest, String filename, FileExtension extension) {
 
 		File tempScreenShotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 
@@ -30,14 +31,16 @@ public class ScreenShotUtility {
 		String timeStamp = new SimpleDateFormat("yyyy-MM-DD hh-mm-ss").format(new Date());
 
 		filename = filename + timeStamp;
-
+		String path = dest + "/" + filename + "." + extensionString;
 		// to store screen shot
 		try {
-			File permanent = new File(dest + "/" + filename + "." + extensionString);
+			File permanent = new File(path);
 			FileHandler.copy(tempScreenShotFile, permanent);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("Path : " + Paths.get(path).toAbsolutePath().toString());
+		return Paths.get(path).toAbsolutePath().toString();
 	}
 
 	public void takeScreenShot(WebElement element, String dest, String filename, FileExtension extension) {

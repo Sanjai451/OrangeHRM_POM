@@ -11,32 +11,47 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ListenerImplementation implements ITestListener {
-	ExtentReports extentReports = new ExtentReports();
-	ExtentSparkReporter sparkReporter = new ExtentSparkReporter("./reports/listener_report.html");
-	ExtentTest test;
-	WebDriver driver = new EdgeDriver();
-	ScreenShotUtility screenShotUtility = new ScreenShotUtility(driver);
+//	ExtentReports extentReports = new ExtentReports();
+//	ExtentSparkReporter sparkReporter = new ExtentSparkReporter("./reports/listener_report.html");
+//	ExtentTest test;
+	
+	ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
+	
+	ExtentReports extentReports = ExtendReportUtility.getExtendInstance();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extentReports.createTest(result.getMethod().getMethodName());
+		ExtentTest t = extentReports.createTest(result.getMethod().getMethodName());
+		test.set(t);
 	}
 	
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.pass("Test Passed");
+		test.get().pass("Test Passed");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.fail("Test Failed");
-		test.fail(result.getThrowable());
-		screenShotUtility.takeScreenShot("./reports", result.getMethod().getMethodName(), FileExtension.PNG);
+//		WebDriver driver = new EdgeDriver();
+		
+		Object object = result.getInstance();
+		BaseClass baseClass = (BaseClass)object;
+		WebDriver driver = baseClass.driver;
+		
+		ScreenShotUtility screenShotUtility = new ScreenShotUtility(driver);
+
+		test.get().fail("Test Failed");
+		test.get().fail(result.getThrowable());
+		
+		try {Thread.sleep(4000);} catch (Exception e) {}
+		
+		String path = screenShotUtility.takeScreenShot("./reports", result.getMethod().getMethodName(), FileExtension.PNG);
+		test.get().addScreenCaptureFromPath(path);
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		test.skip("Test has been skipped");
+		test.get().skip("Test has been skipped");
 	}
 	
 	@Override

@@ -1,17 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[--- Executing Suite ---]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing Test ---]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing Class ---]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing Method ---]]>
+    </line>
+    <line>
+      <![CDATA[[INFO]    Logged in Successfully]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing after method ---]]>
+    </line>
+    <line>
+      <![CDATA[[INFO]    Logged Out Successfully]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing after Class ---]]>
+    </line>
+    <line>
+      <![CDATA[[INFO]    QUITTED BROWSER]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing after test ---]]>
+    </line>
+    <line>
+      <![CDATA[--- Executing after suite ---]]>
+    </line>
   </reporter-output>
-  <suite started-at="2026-03-25T13:44:12 IST" name="Default suite" finished-at="2026-03-25T13:44:16 IST" duration-ms="4298">
+  <suite started-at="2026-03-26T08:53:10 IST" name="Default suite" finished-at="2026-03-26T08:53:55 IST" duration-ms="45430">
     <groups>
     </groups>
-    <test started-at="2026-03-25T13:44:12 IST" name="Default test" finished-at="2026-03-25T13:44:16 IST" duration-ms="4298">
-      <class name="demo_DDT_prac.CaptureScreenShots">
-        <test-method signature="screenShot()[pri:0, instance:demo_DDT_prac.CaptureScreenShots@18078bef]" started-at="2026-03-25T13:44:12 IST" name="screenShot" finished-at="2026-03-25T13:44:16 IST" duration-ms="4229" status="PASS">
+    <test started-at="2026-03-26T08:53:10 IST" name="Default test" finished-at="2026-03-26T08:53:55 IST" duration-ms="45430">
+      <class name="orangeHRM_PIM_Module.AddEmployeeTest">
+        <test-method is-config="true" signature="configBeforeSuite()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:10 IST" name="configBeforeSuite" finished-at="2026-03-26T08:53:10 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing Suite ---]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBeforeSuite -->
+        <test-method is-config="true" signature="configBeforeTest()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:10 IST" name="configBeforeTest" finished-at="2026-03-26T08:53:10 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing Test ---]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBeforeTest -->
+        <test-method is-config="true" signature="configBeforeClass()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:10 IST" name="configBeforeClass" finished-at="2026-03-26T08:53:35 IST" duration-ms="24731" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing Class ---]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBeforeClass -->
+        <test-method is-config="true" signature="configBeforeMethod()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:35 IST" name="configBeforeMethod" finished-at="2026-03-26T08:53:43 IST" duration-ms="8378" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing Method ---]]>
+            </line>
+            <line>
+              <![CDATA[[INFO]    Logged in Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configBeforeMethod -->
+        <test-method signature="test()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:43 IST" name="test" finished-at="2026-03-26T08:53:50 IST" duration-ms="6730" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at orangeHRM_PIM_Module.AddEmployeeTest.test(AddEmployeeTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- screenShot -->
-      </class> <!-- demo_DDT_prac.CaptureScreenShots -->
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="configAfterMethod()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:54 IST" name="configAfterMethod" finished-at="2026-03-26T08:53:55 IST" duration-ms="1217" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing after method ---]]>
+            </line>
+            <line>
+              <![CDATA[[INFO]    Logged Out Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAfterMethod -->
+        <test-method is-config="true" signature="configAfterClass()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:55 IST" name="configAfterClass" finished-at="2026-03-26T08:53:55 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing after Class ---]]>
+            </line>
+            <line>
+              <![CDATA[[INFO]    QUITTED BROWSER]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAfterClass -->
+        <test-method is-config="true" signature="configAfterTest()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:55 IST" name="configAfterTest" finished-at="2026-03-26T08:53:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing after test ---]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAfterTest -->
+        <test-method is-config="true" signature="configAfterSuite()[pri:0, instance:orangeHRM_PIM_Module.AddEmployeeTest@4c12331b]" started-at="2026-03-26T08:53:56 IST" name="configAfterSuite" finished-at="2026-03-26T08:53:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[--- Executing after suite ---]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- configAfterSuite -->
+      </class> <!-- orangeHRM_PIM_Module.AddEmployeeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
